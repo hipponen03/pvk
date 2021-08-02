@@ -19,8 +19,6 @@ class Core
         }
         require_once '../app/controllers/'.$this->currentController.'.php';
         $this->currentController = new $this->currentController;
-        print_r($this->currentController);
-        print_r($url);
 
         if(method_exists($this->currentController, $url[1])){
             $this->currentMethod = $url[1];
